@@ -551,7 +551,9 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
-    qcnvitems
+    qcnvitems \
+    WebViewGoogle \
+    TrichromeLibrary
 endif
 
 -include vendor/extra/devices.mk

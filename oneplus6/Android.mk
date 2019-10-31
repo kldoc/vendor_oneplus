@@ -16,7 +16,30 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),oneplus6)
+ifeq ($(TARGET_DEVICE),oneplus6t)
+include $(CLEAR_VARS)
+LOCAL_MODULE := TrichromeLibrary
+LOCAL_MODULE_OWNER := asus
+LOCAL_SRC_FILES := proprietary/product/app/TrichromeLibrary/TrichromeLibrary.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := WebViewGoogle
+LOCAL_MODULE_OWNER := asus
+LOCAL_SRC_FILES := proprietary/product/app/WebViewGoogle/WebViewGoogle.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := NxpNfcNci
